@@ -1,0 +1,13 @@
+version,host,cpu,nucleos_fisicos,p,B,inner_threads,dtype,t_bootstrap_s,ancho_ic_medio,cobertura_beta_star,err_rel_beta_hat
+bs_auto,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,1,48,1,float64,118.8653,0.011435,0.9302,0.00048711
+bs_auto,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,2,48,1,float64,94.7206,0.011435,0.9302,0.00048711
+bs_auto,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,3,48,1,float64,97.9504,0.011435,0.9302,0.00048711
+bs_auto,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,4,48,1,float64,97.6769,0.011435,0.9302,0.00048711
+bs_sklearn,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,1,48,1,float64,80.9633,0.011812,0.9502,0.00042929
+bs_sklearn,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,2,48,1,float64,67.0871,0.011812,0.9502,0.00042929
+bs_sklearn,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,3,48,1,float64,57.6588,0.011812,0.9502,0.00042929
+bs_sklearn,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,4,48,1,float64,62.8581,0.011812,0.9502,0.00042929
+bs_numpy,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,1,48,1,float64,17.831,0.011812,0.9502,0.00042929
+bs_numpy,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,2,48,1,float64,13.1847,0.011812,0.9502,0.00042929
+bs_numpy,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,3,48,1,float64,8.361,0.011812,0.9502,0.00042929
+bs_numpy,kintsugi,Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz,4,4,48,1,float64,9.7164,0.011812,0.9502,0.00042929
