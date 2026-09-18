@@ -1,5 +1,8 @@
 # Informe
 
+# OJO: Rehacer informe en base a ejecutar Sebas u otro computador con B = 48 como pide el enunciado
+
+
 ## Respuesta a cada inciso/ítem
 
 ### b) **Sobre iteraciones de cada versión de bootstrapping**
@@ -68,9 +71,34 @@ Esto se hace para evitar caer en usar los pipes estandar de **multiprocessing**,
 
 (INSERTAR)
 
-### f) **Análisis y comparación de tiempos de ejecución en bae a *p* para los 3 algoritmos
-**
-(INSERTAR)
+### f) **Análisis y comparación de tiempos de ejecución en bae a *p* para los 3 algoritmos**
+Para este informe se consideran 2 computadores:
+- Sebas: 4 cores físicos
+- Kintsugi: 4 cores físicos
+como ambos tienen un máximo de cores = 4, se considera la ejecución de las 3 versiones con **p** = {1, 2, 3, 4} procesos
+
+Los resultados son los siguientes:
+# TODO: Actualizar en base a nueva run de Sebas con B=48
+#### f.1) Sebas 
+(INSERTAR tabla de TIEMPOS_SEBAS.csv)
+(INSERTAR grafico de [results/tiempo_vs_p_sebas.png] )
+
+#### f.2) Kintsugi
+(INSERTAR de tiempos TIEMPOS_SEBAS.csv)
+(INSERTAR grafico de [results/tiempo_vs_p_kintsugi.png] )
+
+#### f.3) Comparación de resultados de las 3 variantes
+
+De ellos, se puede apreciar la tendencia de **bs_auto** y **bs_sklearn** a tener mayor tiempo de ejecución que **bs_numpy**, donde **bs_auto** es el de peor desempeño, mientras que **bs_numpy** es muchísimo menor.
+
+Otro aspecto a considerar, es la tendencia de las variantes a intentar disminuir sus tiempos de ejecución a medida que se aumenta el número de procesos, pero llegar a una especie de "meseta", donde no pareciera seguir mejorando considerablemente al acercarse a los **p = p_max**
+
+Todo lo anterior se puede atribuir a que:
+- **bs_numpy** construye cada muestra usando pesos, con los cuales decide descartar aquellas observaciones de peso 0, y resuelve las operaciones algebraicas con ecuaciones normales dadas por ```solve```, así ahorrando tiempo y cómputo.
+- **bs_sklearn** utiliza el mismo sistema de muestreo que el anterior, pero resuelve mediante ```LinearRegression```el cual se basa en el método de mínimos cuadrados y SVD, lo cua les mas costoso que resolver con las operaciones normales y por ende tiene un peor desempeño
+- **bs_auto** en cambio, deja que ```BagginRegressor``` se encargue del muestreo bootstrap y ajuste interno, trabajando con las **N** filas completas, incluyendo las filas de peso 0, por ende requiriendo más operaciones y teniendo el peor tiempo de todos.
+ 
+
 
 ### g) **Cálculo, graficación y comparación de T(p), S(p) y E(p)**
 
