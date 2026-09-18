@@ -1,0 +1,25 @@
+version,host,cpu,nucleos_fisicos,p,B,inner_threads,dtype,t_bootstrap_s,ancho_ic_medio,cobertura_beta_star,err_rel_beta_hat
+bs_auto,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,1,48,1,float64,52.0086,0.011435,0.9302,0.00048711
+bs_auto,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,2,48,1,float64,36.3376,0.011435,0.9302,0.00048711
+bs_auto,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,3,48,1,float64,35.3002,0.011435,0.9302,0.00048711
+bs_auto,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,4,48,1,float64,31.3536,0.011435,0.9302,0.00048711
+bs_auto,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,5,48,1,float64,31.247,0.011435,0.9302,0.00048711
+bs_auto,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,6,48,1,float64,31.2873,0.011435,0.9302,0.00048711
+bs_auto,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,7,48,1,float64,31.7419,0.011435,0.9302,0.00048711
+bs_auto,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,8,48,1,float64,31.9039,0.011435,0.9302,0.00048711
+bs_sklearn,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,1,48,1,float64,32.4736,0.011812,0.9502,0.00042929
+bs_sklearn,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,2,48,1,float64,19.5201,0.011812,0.9502,0.00042929
+bs_sklearn,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,3,48,1,float64,16.2163,0.011812,0.9502,0.00042929
+bs_sklearn,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,4,48,1,float64,15.2142,0.011812,0.9502,0.00042929
+bs_sklearn,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,5,48,1,float64,16.7344,0.011812,0.9502,0.00042929
+bs_sklearn,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,6,48,1,float64,16.8409,0.011812,0.9502,0.00042929
+bs_sklearn,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,7,48,1,float64,17.5089,0.011812,0.9502,0.00042929
+bs_sklearn,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,8,48,1,float64,18.0501,0.011812,0.9502,0.00042929
+bs_numpy,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,1,48,1,float64,3.4668,0.011812,0.9502,0.00042929
+bs_numpy,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,2,48,1,float64,2.3823,0.011812,0.9502,0.00042929
+bs_numpy,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,3,48,1,float64,2.0014,0.011812,0.9502,0.00042929
+bs_numpy,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,4,48,1,float64,1.8599,0.011812,0.9502,0.00042929
+bs_numpy,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,5,48,1,float64,1.7975,0.011812,0.9502,0.00042929
+bs_numpy,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,6,48,1,float64,1.7806,0.011812,0.9502,0.00042929
+bs_numpy,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,7,48,1,float64,1.8241,0.011812,0.9502,0.00042929
+bs_numpy,aurora-ferrum,AMD Ryzen 7 8845HS w/ Radeon 780M Graphics,8,8,48,1,float64,1.8765,0.011812,0.9502,0.00042929
