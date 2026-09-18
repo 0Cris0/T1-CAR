@@ -1,13 +1,13 @@
 version,host,cpu,nucleos_fisicos,p,B,inner_threads,dtype,t_bootstrap_s,ancho_ic_medio,cobertura_beta_star,err_rel_beta_hat
-bs_auto,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,1,12,1,float64,0.4728,0.023444,0.8689,0.00203985
-bs_auto,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,2,12,1,float64,4.1525,0.023444,0.8689,0.00203985
-bs_auto,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,3,12,1,float64,4.3988,0.023444,0.8689,0.00203985
-bs_auto,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,4,12,1,float64,4.8277,0.023444,0.8689,0.00203985
-bs_sklearn,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,1,12,1,float64,0.2714,0.024227,0.8852,0.00220527
-bs_sklearn,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,2,12,1,float64,3.8232,0.024227,0.8852,0.00220527
-bs_sklearn,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,3,12,1,float64,3.9983,0.024227,0.8852,0.00220527
-bs_sklearn,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,4,12,1,float64,4.412,0.024227,0.8852,0.00220527
-bs_numpy,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,1,12,1,float64,0.095,0.024227,0.8852,0.00220527
-bs_numpy,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,2,12,1,float64,0.922,0.024227,0.8852,0.00220527
-bs_numpy,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,3,12,1,float64,0.9847,0.024227,0.8852,0.00220527
-bs_numpy,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,4,12,1,float64,1.1183,0.024227,0.8852,0.00220527
+bs_auto,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,1,48,1,float64,82.8505,0.011435,0.9302,0.00048711
+bs_auto,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,2,48,1,float64,74.4481,0.011435,0.9302,0.00048711
+bs_auto,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,3,48,1,float64,68.1876,0.011435,0.9302,0.00048711
+bs_auto,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,4,48,1,float64,64.8295,0.011435,0.9302,0.00048711
+bs_sklearn,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,1,48,1,float64,44.487,0.011812,0.9502,0.00042929
+bs_sklearn,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,2,48,1,float64,41.9853,0.011812,0.9502,0.00042929
+bs_sklearn,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,3,48,1,float64,40.4217,0.011812,0.9502,0.00042929
+bs_sklearn,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,4,48,1,float64,39.2398,0.011812,0.9502,0.00042929
+bs_numpy,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,1,48,1,float64,5.8072,0.011812,0.9502,0.00042929
+bs_numpy,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,2,48,1,float64,4.9562,0.011812,0.9502,0.00042929
+bs_numpy,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,3,48,1,float64,4.7267,0.011812,0.9502,0.00042929
+bs_numpy,Sebas,"Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",4,4,48,1,float64,4.5463,0.011812,0.9502,0.00042929
