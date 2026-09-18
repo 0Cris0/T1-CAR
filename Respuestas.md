@@ -102,9 +102,30 @@ Todo lo anterior se puede atribuir a que:
 
 ### g) **Cálculo, graficación y comparación de T(p), S(p) y E(p)**
 
-(INSERTAR)
+#### g.1) Cálculo
+Primero que todo, el proceso de cálculo de cada uno de esos conceptos fue:
+- **T(p):** Se implementó la clase ```cronometro``` que permite mediante ```perf_counter```medir el tiempo de ejecución de (final - inicial) de un código, la cual fue usada en cada variante para encapsular la ejecución del método de bootstrap de cada una, con tal de poder medir los tiempos de cada repetición y quedarse con el mejor (tiempo menor). De esta manera, al correr las variantes con sus distintos números de procesos, se pudo ir registrando y guardando dichos valores en los .csv
+- **S(p):** Primero obtiene el t_1 (tiempo para 1 solo proceso) mediante ```t1 = g.loc[g["p"] == 1, "t_bootstrap_s"```, luego aplica la fórmula de S(p) = T(1) / T(p) ```float(t1.iloc[0]) / g["t_bootstrap_s"]```
+- **E(p):** Se calcula al expandir la ecuación E(p) = S(p)/p = T(1) / (p*T(p)), mediante ```float(t1.iloc[0]) / (g["t_bootstrap_s"] * g["p"])```
 
-### h) **Cálculo de oberhead y sus principales fuentes**
+#### g.2) Graficación
+##### g.2.1) T(p)
+(INSERTAR grafico tiempo_vs_p_kintsugi)
+
+##### g.2.2) S(p)
+(INSERTAR grafico speedup_kintsugi)
+
+##### g.2.3) E(p)
+(INSERTAR grafico eficiencia_kintsugi)
+
+#### g.3) Comparación
+Se omite la comparación del tiempo, pues ya se mencionó previamente.
+
+Al respecto del speedup (S(p)), se sabe que el speedup ideal sería S(p) = p (ver línea punteada del gráfico), en los resultados obtenidos se ve claramente que esto no se alcanza (siendo el más cercano el **bs_numpy**), apreciándose un crecimiento inical de los 3 algoritmos a medida que se añaden más procesos, pero que rápidamente llega a un punto de inflexión donde el S(p) comienza a decaer en adelante. En general, esta diferencia entre el caso ideal y los resultados empíricos se pueden deber a los costos de creación de procesos, comunicación, desbalance de carga entre procesos u secciones seriales, donde se puede apreciar por la existencia de los puntos de inflexión, que a medida que crecen los procesos, llega un punto donde estos "costos de operación" se vuelven tan grandes que le pasan la cuenta al algoritmo.
+
+En la eficiencia, también se puede apreciar una desviación del caso ideal (E(p) = 1), donde se puede notar que a medida que aumento **p**, esta tiene una clara tendencia a disminuir, siendo **bs_auto** y **bs_sklearn** muy similares, mientras que **bs_numpy** resiste mejor, pero también decae al llegar a **p=p_max**
+
+### h) **Cálculo de overhead y sus principales fuentes**
 
 (INSERTAR)
 
