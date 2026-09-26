@@ -1,0 +1,403 @@
+Sweep iniciado 2026-09-25 22:06:46 -- host=valkyrie p_max=16
+
+=== 2026-09-25 22:06:46 p=1 inner-threads=1 (p*t=1) ===
+[bs_numpy] p=1 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    3.806 s
+  hilos totales    : 1 (nucleos fisicos: 8)   tasa uso : 0.12
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:06:50 p=1 inner-threads=2 (p*t=2) ===
+[bs_numpy] p=1 B=48 hilos_internos=2 dtype=float64
+  tiempo bootstrap :    3.575 s
+  hilos totales    : 2 (nucleos fisicos: 8)   tasa uso : 0.25
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:06:54 p=1 inner-threads=3 (p*t=3) ===
+[bs_numpy] p=1 B=48 hilos_internos=3 dtype=float64
+  tiempo bootstrap :    4.220 s
+  hilos totales    : 3 (nucleos fisicos: 8)   tasa uso : 0.38
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:06:58 p=1 inner-threads=4 (p*t=4) ===
+[bs_numpy] p=1 B=48 hilos_internos=4 dtype=float64
+  tiempo bootstrap :    6.103 s
+  hilos totales    : 4 (nucleos fisicos: 8)   tasa uso : 0.5
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:05 p=1 inner-threads=5 (p*t=5) ===
+[bs_numpy] p=1 B=48 hilos_internos=5 dtype=float64
+  tiempo bootstrap :    4.242 s
+  hilos totales    : 5 (nucleos fisicos: 8)   tasa uso : 0.62
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:09 p=1 inner-threads=6 (p*t=6) ===
+[bs_numpy] p=1 B=48 hilos_internos=6 dtype=float64
+  tiempo bootstrap :    3.985 s
+  hilos totales    : 6 (nucleos fisicos: 8)   tasa uso : 0.75
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:13 p=1 inner-threads=7 (p*t=7) ===
+[bs_numpy] p=1 B=48 hilos_internos=7 dtype=float64
+  tiempo bootstrap :    5.982 s
+  hilos totales    : 7 (nucleos fisicos: 8)   tasa uso : 0.88
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:20 p=1 inner-threads=8 (p*t=8) ===
+[bs_numpy] p=1 B=48 hilos_internos=8 dtype=float64
+  tiempo bootstrap :    4.103 s
+  hilos totales    : 8 (nucleos fisicos: 8)   tasa uso : 1.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:24 p=1 inner-threads=9 (p*t=9) ===
+[bs_numpy] p=1 B=48 hilos_internos=9 dtype=float64
+  tiempo bootstrap :    4.149 s
+  hilos totales    : 9 (nucleos fisicos: 8)   tasa uso : 1.12
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:28 p=1 inner-threads=10 (p*t=10) ===
+[bs_numpy] p=1 B=48 hilos_internos=10 dtype=float64
+  tiempo bootstrap :    4.341 s
+  hilos totales    : 10 (nucleos fisicos: 8)   tasa uso : 1.25
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:33 p=1 inner-threads=11 (p*t=11) ===
+[bs_numpy] p=1 B=48 hilos_internos=11 dtype=float64
+  tiempo bootstrap :    4.422 s
+  hilos totales    : 11 (nucleos fisicos: 8)   tasa uso : 1.38
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:38 p=1 inner-threads=12 (p*t=12) ===
+[bs_numpy] p=1 B=48 hilos_internos=12 dtype=float64
+  tiempo bootstrap :    4.232 s
+  hilos totales    : 12 (nucleos fisicos: 8)   tasa uso : 1.5
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:42 p=1 inner-threads=13 (p*t=13) ===
+[bs_numpy] p=1 B=48 hilos_internos=13 dtype=float64
+  tiempo bootstrap :    3.828 s
+  hilos totales    : 13 (nucleos fisicos: 8)   tasa uso : 1.62
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:46 p=1 inner-threads=14 (p*t=14) ===
+[bs_numpy] p=1 B=48 hilos_internos=14 dtype=float64
+  tiempo bootstrap :    3.780 s
+  hilos totales    : 14 (nucleos fisicos: 8)   tasa uso : 1.75
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:50 p=1 inner-threads=15 (p*t=15) ===
+[bs_numpy] p=1 B=48 hilos_internos=15 dtype=float64
+  tiempo bootstrap :    4.006 s
+  hilos totales    : 15 (nucleos fisicos: 8)   tasa uso : 1.88
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:54 p=1 inner-threads=16 (p*t=16) ===
+[bs_numpy] p=1 B=48 hilos_internos=16 dtype=float64
+  tiempo bootstrap :    4.152 s
+  hilos totales    : 16 (nucleos fisicos: 8)   tasa uso : 2.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:07:59 p=2 inner-threads=1 (p*t=2) ===
+[bs_numpy] p=2 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    3.139 s
+  hilos totales    : 2 (nucleos fisicos: 8)   tasa uso : 0.25
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:02 p=2 inner-threads=2 (p*t=4) ===
+[bs_numpy] p=2 B=48 hilos_internos=2 dtype=float64
+  tiempo bootstrap :    3.123 s
+  hilos totales    : 4 (nucleos fisicos: 8)   tasa uso : 0.5
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:06 p=2 inner-threads=3 (p*t=6) ===
+[bs_numpy] p=2 B=48 hilos_internos=3 dtype=float64
+  tiempo bootstrap :    3.046 s
+  hilos totales    : 6 (nucleos fisicos: 8)   tasa uso : 0.75
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:09 p=2 inner-threads=4 (p*t=8) ===
+[bs_numpy] p=2 B=48 hilos_internos=4 dtype=float64
+  tiempo bootstrap :    2.691 s
+  hilos totales    : 8 (nucleos fisicos: 8)   tasa uso : 1.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:12 p=2 inner-threads=5 (p*t=10) ===
+[bs_numpy] p=2 B=48 hilos_internos=5 dtype=float64
+  tiempo bootstrap :    3.053 s
+  hilos totales    : 10 (nucleos fisicos: 8)   tasa uso : 1.25
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:16 p=2 inner-threads=6 (p*t=12) ===
+[bs_numpy] p=2 B=48 hilos_internos=6 dtype=float64
+  tiempo bootstrap :    2.771 s
+  hilos totales    : 12 (nucleos fisicos: 8)   tasa uso : 1.5
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:19 p=2 inner-threads=7 (p*t=14) ===
+[bs_numpy] p=2 B=48 hilos_internos=7 dtype=float64
+  tiempo bootstrap :    2.812 s
+  hilos totales    : 14 (nucleos fisicos: 8)   tasa uso : 1.75
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:22 p=2 inner-threads=8 (p*t=16) ===
+[bs_numpy] p=2 B=48 hilos_internos=8 dtype=float64
+  tiempo bootstrap :    2.693 s
+  hilos totales    : 16 (nucleos fisicos: 8)   tasa uso : 2.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:25 p=3 inner-threads=1 (p*t=3) ===
+[bs_numpy] p=3 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    2.635 s
+  hilos totales    : 3 (nucleos fisicos: 8)   tasa uso : 0.38
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:28 p=3 inner-threads=2 (p*t=6) ===
+[bs_numpy] p=3 B=48 hilos_internos=2 dtype=float64
+  tiempo bootstrap :    2.459 s
+  hilos totales    : 6 (nucleos fisicos: 8)   tasa uso : 0.75
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:31 p=3 inner-threads=3 (p*t=9) ===
+[bs_numpy] p=3 B=48 hilos_internos=3 dtype=float64
+  tiempo bootstrap :    2.493 s
+  hilos totales    : 9 (nucleos fisicos: 8)   tasa uso : 1.12
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:34 p=3 inner-threads=4 (p*t=12) ===
+[bs_numpy] p=3 B=48 hilos_internos=4 dtype=float64
+  tiempo bootstrap :    2.709 s
+  hilos totales    : 12 (nucleos fisicos: 8)   tasa uso : 1.5
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:37 p=3 inner-threads=5 (p*t=15) ===
+[bs_numpy] p=3 B=48 hilos_internos=5 dtype=float64
+  tiempo bootstrap :    2.657 s
+  hilos totales    : 15 (nucleos fisicos: 8)   tasa uso : 1.88
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:40 p=4 inner-threads=1 (p*t=4) ===
+[bs_numpy] p=4 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    2.207 s
+  hilos totales    : 4 (nucleos fisicos: 8)   tasa uso : 0.5
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:42 p=4 inner-threads=2 (p*t=8) ===
+[bs_numpy] p=4 B=48 hilos_internos=2 dtype=float64
+  tiempo bootstrap :    2.481 s
+  hilos totales    : 8 (nucleos fisicos: 8)   tasa uso : 1.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:45 p=4 inner-threads=3 (p*t=12) ===
+[bs_numpy] p=4 B=48 hilos_internos=3 dtype=float64
+  tiempo bootstrap :    2.210 s
+  hilos totales    : 12 (nucleos fisicos: 8)   tasa uso : 1.5
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:48 p=4 inner-threads=4 (p*t=16) ===
+[bs_numpy] p=4 B=48 hilos_internos=4 dtype=float64
+  tiempo bootstrap :    2.315 s
+  hilos totales    : 16 (nucleos fisicos: 8)   tasa uso : 2.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:51 p=5 inner-threads=1 (p*t=5) ===
+[bs_numpy] p=5 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    1.881 s
+  hilos totales    : 5 (nucleos fisicos: 8)   tasa uso : 0.62
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:53 p=5 inner-threads=2 (p*t=10) ===
+[bs_numpy] p=5 B=48 hilos_internos=2 dtype=float64
+  tiempo bootstrap :    1.866 s
+  hilos totales    : 10 (nucleos fisicos: 8)   tasa uso : 1.25
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:55 p=5 inner-threads=3 (p*t=15) ===
+[bs_numpy] p=5 B=48 hilos_internos=3 dtype=float64
+  tiempo bootstrap :    1.813 s
+  hilos totales    : 15 (nucleos fisicos: 8)   tasa uso : 1.88
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:57 p=6 inner-threads=1 (p*t=6) ===
+[bs_numpy] p=6 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    1.828 s
+  hilos totales    : 6 (nucleos fisicos: 8)   tasa uso : 0.75
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:08:59 p=6 inner-threads=2 (p*t=12) ===
+[bs_numpy] p=6 B=48 hilos_internos=2 dtype=float64
+  tiempo bootstrap :    1.754 s
+  hilos totales    : 12 (nucleos fisicos: 8)   tasa uso : 1.5
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:01 p=7 inner-threads=1 (p*t=7) ===
+[bs_numpy] p=7 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    1.985 s
+  hilos totales    : 7 (nucleos fisicos: 8)   tasa uso : 0.88
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:04 p=7 inner-threads=2 (p*t=14) ===
+[bs_numpy] p=7 B=48 hilos_internos=2 dtype=float64
+  tiempo bootstrap :    2.161 s
+  hilos totales    : 14 (nucleos fisicos: 8)   tasa uso : 1.75
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:06 p=8 inner-threads=1 (p*t=8) ===
+[bs_numpy] p=8 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    2.117 s
+  hilos totales    : 8 (nucleos fisicos: 8)   tasa uso : 1.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:09 p=8 inner-threads=2 (p*t=16) ===
+[bs_numpy] p=8 B=48 hilos_internos=2 dtype=float64
+  tiempo bootstrap :    1.928 s
+  hilos totales    : 16 (nucleos fisicos: 8)   tasa uso : 2.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:11 p=9 inner-threads=1 (p*t=9) ===
+[bs_numpy] p=9 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    2.035 s
+  hilos totales    : 9 (nucleos fisicos: 8)   tasa uso : 1.12
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:14 p=10 inner-threads=1 (p*t=10) ===
+[bs_numpy] p=10 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    2.434 s
+  hilos totales    : 10 (nucleos fisicos: 8)   tasa uso : 1.25
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:17 p=11 inner-threads=1 (p*t=11) ===
+[bs_numpy] p=11 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    2.460 s
+  hilos totales    : 11 (nucleos fisicos: 8)   tasa uso : 1.38
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:20 p=12 inner-threads=1 (p*t=12) ===
+[bs_numpy] p=12 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    2.812 s
+  hilos totales    : 12 (nucleos fisicos: 8)   tasa uso : 1.5
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:23 p=13 inner-threads=1 (p*t=13) ===
+[bs_numpy] p=13 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    2.664 s
+  hilos totales    : 13 (nucleos fisicos: 8)   tasa uso : 1.62
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:26 p=14 inner-threads=1 (p*t=14) ===
+[bs_numpy] p=14 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    2.639 s
+  hilos totales    : 14 (nucleos fisicos: 8)   tasa uso : 1.75
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:29 p=15 inner-threads=1 (p*t=15) ===
+[bs_numpy] p=15 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    2.619 s
+  hilos totales    : 15 (nucleos fisicos: 8)   tasa uso : 1.88
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:09:32 p=16 inner-threads=1 (p*t=16) ===
+[bs_numpy] p=16 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    2.591 s
+  hilos totales    : 16 (nucleos fisicos: 8)   tasa uso : 2.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+Sweep finalizado 2026-09-25 22:09:35
