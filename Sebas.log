@@ -1,0 +1,67 @@
+Sweep iniciado 2026-09-25 22:37:47 -- host=Sebas p_max=4
+
+=== 2026-09-25 22:37:47 p=1 inner-threads=1 (p*t=1) ===
+[bs_numpy] p=1 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :   11.195 s
+  hilos totales    : 1 (nucleos fisicos: 4)   tasa uso : 0.25
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:38:06 p=1 inner-threads=2 (p*t=2) ===
+[bs_numpy] p=1 B=48 hilos_internos=2 dtype=float64
+  tiempo bootstrap :    8.553 s
+  hilos totales    : 2 (nucleos fisicos: 4)   tasa uso : 0.5
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:38:16 p=1 inner-threads=3 (p*t=3) ===
+[bs_numpy] p=1 B=48 hilos_internos=3 dtype=float64
+  tiempo bootstrap :   16.773 s
+  hilos totales    : 3 (nucleos fisicos: 4)   tasa uso : 0.75
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:38:35 p=1 inner-threads=4 (p*t=4) ===
+[bs_numpy] p=1 B=48 hilos_internos=4 dtype=float64
+  tiempo bootstrap :   15.453 s
+  hilos totales    : 4 (nucleos fisicos: 4)   tasa uso : 1.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:38:52 p=2 inner-threads=1 (p*t=2) ===
+[bs_numpy] p=2 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    6.443 s
+  hilos totales    : 2 (nucleos fisicos: 4)   tasa uso : 0.5
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:39:00 p=2 inner-threads=2 (p*t=4) ===
+[bs_numpy] p=2 B=48 hilos_internos=2 dtype=float64
+  tiempo bootstrap :    6.368 s
+  hilos totales    : 4 (nucleos fisicos: 4)   tasa uso : 1.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:39:08 p=3 inner-threads=1 (p*t=3) ===
+[bs_numpy] p=3 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    5.476 s
+  hilos totales    : 3 (nucleos fisicos: 4)   tasa uso : 0.75
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+=== 2026-09-25 22:39:15 p=4 inner-threads=1 (p*t=4) ===
+[bs_numpy] p=4 B=48 hilos_internos=1 dtype=float64
+  tiempo bootstrap :    5.361 s
+  hilos totales    : 4 (nucleos fisicos: 4)   tasa uso : 1.0
+  ancho IC medio   : 0.011812
+  cobertura beta*  : 0.950
+  ||mean(b)-bhat|| : 4.29e-04
+
+Sweep finalizado 2026-09-25 22:39:22
