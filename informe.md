@@ -7,23 +7,27 @@
 
 ## Respuestas incisos:
 
-### a) Generación de datos sintéticos
-
-Véase:
-```
-gen_data.py
-common.py
-```
-
 ### b) Implementación de bootstrapping
 
-Véase comentario al tope de cada archivo:
-```
-bs_auto.py
-bs_sklearn.py
-bs_numpy.py
-common.py
-```
+Se creó un archivo de utils compartidas `common.py` y un archivo para cada una de las implementaciones de bootstrapping:
+
+#### common.py 
+
+- El ajuste lineal se resuelve por factorización directa en vez de invertir matrices explícitamente.
+
+- Cada resample bootstrap se construye usando una identidad algebraica que evita reconstruir el dataset completo por repetición: se trabaja con pesos y se descartan las filas no sorteadas, reduciendo el volumen de cómputo por tarea.
+
+#### bs_auto.py
+
+Delega el bootstrapping y el paralelismo por completo a una librería externa. No aplica el descarte de filas no sorteadas ni la construcción optimizada del resample, por lo que hace más trabajo por tarea que las otras dos versiones.
+
+#### bs_sklearn.py 
+
+Aplica la construcción optimizada del resample (pesos + descarte de filas), pero el ajuste final usa un método numérico más costoso propio de la librería, que es el cuello de botella de esta versión.
+
+#### bs_numpy.py 
+
+La versión que más se pudo optimizar: combina paralelismo explícito, construcción eficiente del resample y resolución directa del sistema de ecuaciones normales, minimizando tanto el trabajo por tarea como la sobrecarga de cómputo. Es la más rápida en tiempo absoluto, pero por lo mismo la más sensible a la sobrecarga fija de paralelización (cada tarea es tan liviana que el costo de repartirla entre procesos pesa proporcionalmente más).
 
 ### c) Correctitud y reproducibilidad
 
@@ -38,7 +42,7 @@ Los resultados para cada una de las métricas se adjuntan a continuación:
 | Métrica        | PC-1 (sebas)  | PC-2 (kintsugi) | PC-3 (aurora-ferrum) |
 | -------------- | -------------: | -----------: | -----------: |
 | Ancho          | 0.024227   (+) |     0.011812 |     0.011812 |
-| Cobertura      |     88,5%  (-) |        ≈95%  |        ≈95%  |
+| Cobertura      |     88,5%  (-) |        ~95%  |        ~95%  |
 | Error relativo | 0.00220527 (+) |   0.00042929 |   0.00042929 |
 
 #### ii)
@@ -189,6 +193,7 @@ $$p <= cores\_fisicos$$
 #### PC-1
 
 ![eficiencia](results/eficiencia_sebas.png)
+![speedup](results/speedup_sebas.png)
 
 ##### bs_auto
 
@@ -220,6 +225,7 @@ $$p <= cores\_fisicos$$
 #### PC-2
 
 ![eficiencia](results/eficiencia_kintsugi.png)
+![speedup](results/speedup_kintsugi.png)
 
 ##### bs_auto
 
@@ -251,6 +257,7 @@ $$p <= cores\_fisicos$$
 #### PC-3
 
 ![eficiencia](results/eficiencia_aurora-ferrum.png)
+![speedup](results/speedup_aurora-ferrum.png)
 
 ##### bs_auto
 
@@ -297,15 +304,160 @@ Se utilizó T(1) como el tiempo con un sólo worker para par cada implementació
 
 ### h) Overhead según p
 
+#### PC-1
 
+##### bs_auto (T1 = 73.493 s)
+
+| p | T(p) [s] | T0(p) [s] |
+|---:|---:|---:|
+| 1 | 73.493 | 0.000 |
+| 2 | 71.334 | 69.175 |
+| 3 | 62.907 | 115.228 |
+| 4 | 61.056 | 170.731 |
+
+##### bs_numpy (T1 = 6.431 s)
+
+| p | T(p) [s] | T0(p) [s] |
+|---:|---:|---:|
+| 1 | 6.431 | 0.000 |
+| 2 | 4.848 | 3.265 |
+| 3 | 4.994 | 8.551 |
+| 4 | 4.568 | 11.841 |
+
+##### bs_sklearn (T1 = 42.273 s)
+
+| p | T(p) [s] | T0(p) [s] |
+|---:|---:|---:|
+| 1 | 42.273 | 0.000 |
+| 2 | 41.773 | 41.273 |
+| 3 | 37.568 | 70.431 |
+| 4 | 38.712 | 112.575 |
+
+#### PC-2
+
+##### bs_auto (T1 = 118.865 s)
+
+| p | T(p) [s] | T0(p) [s] |
+|---:|---:|---:|
+| 1 | 118.865 | 0.000 |
+| 2 | 94.721 | 70.577 |
+| 3 | 97.950 | 174.985 |
+| 4 | 97.677 | 271.843 |
+
+##### bs_numpy (T1 = 17.831 s)
+
+| p | T(p) [s] | T0(p) [s] |
+|---:|---:|---:|
+| 1 | 17.831 | 0.000 |
+| 2 | 13.185 | 8.539 |
+| 3 | 8.361 | 7.252 |
+| 4 | 9.716 | 21.033 |
+
+##### bs_sklearn (T1 = 80.963 s)
+
+| p | T(p) [s] | T0(p) [s] |
+|---:|---:|---:|
+| 1 | 80.963 | 0.000 |
+| 2 | 67.087 | 53.211 |
+| 3 | 57.659 | 92.014 |
+| 4 | 62.858 | 170.469 |
+
+#### PC-3
+
+##### bs_auto (T1 = 52.009 s)
+
+| p | T(p) [s] | T0(p) [s] |
+|---:|---:|---:|
+| 1 | 52.009 | 0.000 |
+| 2 | 36.338 | 20.667 |
+| 3 | 35.300 | 53.891 |
+| 4 | 31.354 | 73.407 |
+| 5 | 31.247 | 104.226 |
+| 6 | 31.287 | 135.713 |
+| 7 | 31.742 | 170.185 |
+| 8 | 31.904 | 203.223 |
+
+##### bs_numpy (T1 = 3.467 s)
+
+| p | T(p) [s] | T0(p) [s] |
+|---:|---:|---:|
+| 1 | 3.467 | 0.000 |
+| 2 | 2.382 | 1.297 |
+| 3 | 2.001 | 2.536 |
+| 4 | 1.860 | 3.973 |
+| 5 | 1.798 | 5.523 |
+| 6 | 1.781 | 7.219 |
+| 7 | 1.824 | 9.301 |
+| 8 | 1.876 | 11.541 |
+
+##### bs_sklearn (T1 = 32.474 s)
+
+| p | T(p) [s] | T0(p) [s] |
+|---:|---:|---:|
+| 1 | 32.474 | 0.000 |
+| 2 | 19.520 | 6.566 |
+| 3 | 16.216 | 16.174 |
+| 4 | 15.214 | 28.382 |
+| 5 | 16.734 | 51.196 |
+| 6 | 16.841 | 68.572 |
+| 7 | 17.509 | 90.089 |
+| 8 | 18.050 | 111.926 |
+
+#### Comentarios:
+
+Notamos que existe un overhead que creciente con el número de procesos. Que se correlaciona con el costo de realizar un fork y copiar los datos del proceso dado que estos no comparten memoria a diferencia de los threads.
 
 ### i) Versión más eficiente
 
 Notamos que la versión más eficiente fue por lejos la implementación de numpy. Como se vió en los datos expuestos anteriormente, el desempeño fue el mejor en los 3 equipos probados. Obteniendo el menor tiempo, y mayor retención de eficiencia y speedup a medida que se agregan workers.
 
-A continuación adjuntamos los datos conseguidos en PC-3:
+#### PC-3 (aurora-ferrum, p_max=8)
 
-...
+| p | t (inner threads) | tiempo bootstrap [s] | ancho IC medio | cobertura beta* | \|\|mean(b)-bhat\|\| |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 1 | 5.348 | 0.011812 | 0.950 | 4.29e-04 |
+| 1 | 2 | 4.281 | 0.011812 | 0.950 | 4.29e-04 |
+| 1 | 3 | 4.082 | 0.011812 | 0.950 | 4.29e-04 |
+| 1 | 4 | 4.440 | 0.011812 | 0.950 | 4.29e-04 |
+| 1 | 5 | 5.908 | 0.011812 | 0.950 | 4.29e-04 |
+| 1 | 6 | 3.895 | 0.011812 | 0.950 | 4.29e-04 |
+| 1 | 7 | 5.978 | 0.011812 | 0.950 | 4.29e-04 |
+| 1 | 8 | 6.485 | 0.011812 | 0.950 | 4.29e-04 |
+| 2 | 1 | 3.486 | 0.011812 | 0.950 | 4.29e-04 |
+| 2 | 2 | 3.041 | 0.011812 | 0.950 | 4.29e-04 |
+| 2 | 3 | 2.895 | 0.011812 | 0.950 | 4.29e-04 |
+| 2 | 4 | 3.044 | 0.011812 | 0.950 | 4.29e-04 |
+| 3 | 1 | 2.355 | 0.011812 | 0.950 | 4.29e-04 |
+| 3 | 2 | 2.260 | 0.011812 | 0.950 | 4.29e-04 |
+| 4 | 1 | 2.657 | 0.011812 | 0.950 | 4.29e-04 |
+| 4 | 2 | 3.013 | 0.011812 | 0.950 | 4.29e-04 |
+| 5 | 1 | 2.534 | 0.011812 | 0.950 | 4.29e-04 |
+| 6 | 1 | 2.350 | 0.011812 | 0.950 | 4.29e-04 |
+| 7 | 1 | 2.361 | 0.011812 | 0.950 | 4.29e-04 |
+| 8 | 1 | 2.158 | 0.011812 | 0.950 | 4.29e-04 |
+
+#### PC-1 (sebas, p_max=4)
+
+| p | t (inner threads) | tiempo bootstrap [s] | ancho IC medio | cobertura beta* | \|\|mean(b)-bhat\|\| |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 1 | 11.195 | 0.011812 | 0.950 | 4.29e-04 |
+| 1 | 2 | 8.553 | 0.011812 | 0.950 | 4.29e-04 |
+| 1 | 3 | 16.773 | 0.011812 | 0.950 | 4.29e-04 |
+| 1 | 4 | 15.453 | 0.011812 | 0.950 | 4.29e-04 |
+| 2 | 1 | 6.443 | 0.011812 | 0.950 | 4.29e-04 |
+| 2 | 2 | 6.368 | 0.011812 | 0.950 | 4.29e-04 |
+| 3 | 1 | 5.476 | 0.011812 | 0.950 | 4.29e-04 |
+| 4 | 1 | 5.361 | 0.011812 | 0.950 | 4.29e-04 |
 
 ### j) Comparación de resultados
 
+Notamos que los mejores resultados se alcanzaron con un único thread, con un numero de procesos igual al número de nucleos físicos de cada máquina. Cabe mencionar también que incluso bajo los mismos valores de p,t. PC-3 tuvo un mejor desempeño. Probablemente debido a la diferencia de frecuenica de los procesadores, haciendo la ejecución de PC-3 más rápida. Esto resalta la importancia de comparar cada máquina por separado, dado que estas diferencias de performance influyen tanto en el tiempo de ejecución mínimo, como también determinan la combinación óptima de threads/procesos en cada caso.
+
+# Uso de IA:
+
+Se utilizó IA para:
+- Buscar posibles optimizaciones al código implementado iterativamente (Claude)
+- Debuggear errores de código (Claude)
+- Explicar detalles de implementación de las libererías que impactaban en el código y sus resultados (Claude)
+- Generar un script de bash que pruebe todas las combinaciones relevantes de p,t dado un valor de p_max (Claude)
+- Generar tablas de markdown a partir de logs de ejecución (ChatGPT)
