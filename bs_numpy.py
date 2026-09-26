@@ -10,7 +10,7 @@ Optimizaciones respecto de la version ingenua:
   1. `solve` en vez de `inv(A) @ b`.
   2. X^(b) nunca se materializa: se usa X^T diag(w) X con w = conteos del
      sorteo multinomial equivalente.
-  3. Se descartan las filas con w_i = 0 (~37% de N) -> ~37% menos flops.
+  3. Se descartan las filas con w_i = 0-
   4. Escalado por sqrt(w) in-place: una sola copia de memoria por resample.
   5. X se comparte por memmap; los workers reciben rutas, no arreglos.
   6. 1 hilo BLAS por proceso (--inner-threads 1) para evitar sobresuscripcion.
@@ -63,8 +63,7 @@ def main():
     # Pasos 2 y 3
     mejor = np.inf
     for _ in range(args.repeats):
-        with parallel_config(backend="loky",
-                             inner_max_num_threads=args.inner_threads):
+        with parallel_config(backend="loky", inner_max_num_threads=args.inner_threads):
             with common.cronometro() as t:
                 betas = bootstrap(P, args.n_resamples, args.n_jobs, dtype)
         mejor = min(mejor, t.dt)

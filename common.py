@@ -186,6 +186,13 @@ def machine_info() -> dict:
         "joblib": joblib.__version__,
     }
 
+def sobre_suscripcion(p: int, inner_threads: int, nucleos_fisicos: int) -> dict:
+    total = p * inner_threads
+    return {
+        "hilos_totales": total,
+        "tasa_uso": round(total / nucleos_fisicos, 2) if nucleos_fisicos else None,
+    }
+
 
 def blas_info() -> str:
     try:
@@ -219,6 +226,22 @@ class cronometro:
         self.dt = time.perf_counter() - self.t0
         return False
 
+def threadpool_info_str() -> str:
+    try:
+        from threadpoolctl import threadpool_info
+
+        pools = threadpool_info()
+
+        if not pools:
+            return "none"
+
+        return "; ".join(
+            f"{d.get('internal_api')}:{d.get('num_threads')}"
+            for d in pools
+        )
+    except Exception:
+        return "unknown"
+
 
 # ----------------------------------------------------------------------------
 # CLI comun a las tres versiones
@@ -246,6 +269,7 @@ def reportar(version: str, args, t_boot: float, betas, beta_hat, beta_star):
     betas = np.asarray(betas)
     lo, hi = ci_percentil(betas, ALPHA)
     info = machine_info()
+    susc = sobre_suscripcion(args.n_jobs, args.inner_threads, info["nucleos_fisicos"])
     fila = {
         "version": version,
         "host": info["host"],
@@ -254,6 +278,8 @@ def reportar(version: str, args, t_boot: float, betas, beta_hat, beta_star):
         "p": args.n_jobs,
         "B": args.n_resamples,
         "inner_threads": args.inner_threads,
+        "hilos_totales": susc["hilos_totales"],
+        "tasa_uso": susc["tasa_uso"],
         "dtype": args.dtype,
         "t_bootstrap_s": round(t_boot, 4),
         "ancho_ic_medio": round(float(np.mean(hi - lo)), 6),
@@ -271,6 +297,10 @@ def reportar(version: str, args, t_boot: float, betas, beta_hat, beta_star):
         print(f"[{version}] p={args.n_jobs} B={args.n_resamples} "
               f"hilos_internos={args.inner_threads} dtype={args.dtype}")
         print(f"  tiempo bootstrap : {t_boot:8.3f} s")
+        print(f"  hilos totales    : {susc['hilos_totales']} "
+              f"(nucleos fisicos: {info['nucleos_fisicos']}) "
+              f"  tasa uso : {susc['tasa_uso']}"
+              )
         print(f"  ancho IC medio   : {fila['ancho_ic_medio']:.6f}")
         print(f"  cobertura beta*  : {fila['cobertura_beta_star']:.3f}")
         print(f"  ||mean(b)-bhat|| : {fila['err_rel_beta_hat']:.2e}")

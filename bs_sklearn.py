@@ -4,12 +4,12 @@ bs_sklearn.py  --  Paralelismo explicito con joblib.Parallel, ajuste con
 
 Cada tarea = un resample completo (sorteo + ajuste). Las tareas son
 independientes, asi que no hay comunicacion ni sincronizacion entre procesos:
-paralelismo de tareas puro.
+paralelismo de tareas puro
 
-Diferencia clave con bs_auto: aca controlamos como se arma X^(b), y aplicamos
+Diferencia con bs_auto: aca controlamos como se arma X^(b), y aplicamos
 el truco de pesos + descarte de filas no sorteadas. El ajuste sigue siendo el
 de sklearn (scipy.linalg.lstsq, basado en SVD), que es el cuello de botella
-de esta version.
+de esta version
 """
 
 from __future__ import annotations
@@ -25,8 +25,10 @@ VERSION = "bs_sklearn"
 
 
 def _resample_fit(xpath, ypath, ss, dtype):
-    """Un resample. Recibe RUTAS, no arreglos: X se abre por memmap una sola
-    vez por worker (ver common.load_shared)."""
+    """
+    Un resample. Recibe RUTAS, no arreglos: X se abre por memmap una sola
+    vez por worker (ver common.load_shared)
+    """
     X, y = common.load_shared(xpath, ypath)
     nz, sw = common.bootstrap_weights(np.random.default_rng(ss), X.shape[0])
     Xw, yw = common.weighted_design(X, y, nz, sw, dtype)
